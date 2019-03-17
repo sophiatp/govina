@@ -12,8 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.master');
 });
+
+Route::get('/admin', function () {
+    return view('admin.master');
+});
+
 
 Auth::routes();
 
