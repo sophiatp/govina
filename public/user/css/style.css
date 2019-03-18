@@ -70,6 +70,7 @@ body {
 .account_desc li{
 	display:inline;
 	border-left:1px dotted #CCC;
+    text-transform: uppercase;
 }
 .account_desc li:first-child{
 	border:none;
