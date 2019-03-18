@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('user.master');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/admin', function () {
     return view('admin.master');
@@ -23,3 +21,10 @@ Route::get('/admin', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('admin', function () {
+   return view('admin.master');
+});
+
+Route::resource('categories', 'CategoryController');
