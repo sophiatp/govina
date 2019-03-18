@@ -1,7 +1,7 @@
 <div class="header">
     <div class="headertop_desc">
         <div class="call">
-            <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></span></p>
+            <p><span>Hottline: </span><span class="number">0931-428-343</span></p>
         </div>
         <div class="account_desc">
             <ul>
@@ -61,7 +61,7 @@
     <div class="header_bottom">
         <div class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="delivery.html">Delivery</a></li>
                 <li><a href="news.html">News</a></li>

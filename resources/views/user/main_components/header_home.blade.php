@@ -1,15 +1,13 @@
 <div class="header">
     <div class="headertop_desc">
         <div class="call">
-            <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></span></p>
+            <p><span>Hotline: </span><span class="number">0931-428-343</span></p>
         </div>
+        {{--should show facebook and zalo in here--}}
         <div class="account_desc">
             <ul>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Checkout</a></li>
-                <li><a href="#">My Account</a></li>
+                <li><a href="https://www.facebook.com/vina.max.395"><i class="fab fa-facebook-square" style="color: #4267B2;"></i>&nbsp;facebook</a></li>
+                <li><a href="https://zalo.me/0931428343">zalo</a></li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -18,15 +16,15 @@
         <div class="logo">
             <a href="index.html"><img src="{{ asset('user/images/logo.png') }}" alt=""/></a>
         </div>
-        <div class="cart">
-            <p>Welcome to our Online Store! <span>Cart:</span>
-            <div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-                <ul class="dropdown">
-                    <li>you have no items in your Shopping cart</li>
-                </ul>
-            </div>
-            </p>
-        </div>
+        {{--<div class="cart">--}}
+            {{--<p>Welcome to our Online Store! <span>Cart:</span>--}}
+            {{--<div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00--}}
+                {{--<ul class="dropdown">--}}
+                    {{--<li>you have no items in your Shopping cart</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--</p>--}}
+        {{--</div>--}}
         <script type="text/javascript">
             function DropDown(el) {
                 this.dd = el;
@@ -61,11 +59,11 @@
     <div class="header_bottom">
         <div class="menu">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="delivery.html">Delivery</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="index.html">Trang Chủ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="delivery.html">Tin Tức</a></li>
+                <li><a href="news.html">Thanh Toán</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
                 <div class="clear"></div>
             </ul>
         </div>
