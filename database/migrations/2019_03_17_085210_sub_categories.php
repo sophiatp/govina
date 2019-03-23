@@ -19,6 +19,7 @@ class SubCategories extends Migration
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

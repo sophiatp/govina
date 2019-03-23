@@ -20,6 +20,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
     @include('user.main_components.header_home')
     <div class="main">
+        <div class="categories">
+            <ul>
+                @include('user.main_components.menu')
+            </ul>
+        </div>
         <div class="content">
             @yield('content')
         </div>

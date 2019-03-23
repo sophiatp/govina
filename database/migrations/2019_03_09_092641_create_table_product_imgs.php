@@ -19,6 +19,7 @@ class CreateTableProductImgs extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('img_url');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

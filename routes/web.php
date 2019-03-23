@@ -21,4 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('administrator', function () {
+    return view('admin.master');
+});
+
 Route::resource('categories', 'CategoryController');
+Route::resource('products', 'ProductController');
+
+

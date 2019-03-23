@@ -1,16 +1,8 @@
-{{--<li><a href="#">Mobile Phones</a></li>--}}
-{{--<li><a href="#">Desktop</a></li>--}}
-{{--<li><a href="#">Laptop</a></li>--}}
-{{--<li><a href="#">Accessories</a></li>--}}
-{{--<li><a href="#">Software</a></li>--}}
-{{--<li><a href="#">Sports &amp; Fitness</a></li>--}}
-{{--<li><a href="#">Footwear</a></li>--}}
-{{--<li><a href="#">Jewellery</a></li>--}}
-{{--<li><a href="#">Clothing</a></li>--}}
-{{--<li><a href="#">Home Decor &amp; Kitchen</a></li>--}}
-{{--<li><a href="#">Beauty &amp; Healthcare</a></li>--}}
-{{--<li><a href="#">Toys, Kids &amp; Babies</a></li>--}}
-
 @foreach($categories as $category)
-    <li><a href="#">{{ $category['name']}}</a></li>
+    <li class="main-category"><a href="#" class="main-category-link">{{ $category['name']}}</a></li>
+    @foreach($subCategories as $subCategory)
+        @if($subCategory['category_id'] == $category['id'])
+            <li><a href="#">{{ $subCategory['name']}}</a></li>
+        @endif
+    @endforeach
 @endforeach

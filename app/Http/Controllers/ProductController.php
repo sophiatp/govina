@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Category;
+
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\SubCategory;
 
-class IndexController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +16,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        $subCategories = SubCategory::all();
-
-        return view('user.home.home', compact('categories', 'subCategories'));
+        return view('admin.products.list');
     }
 
     /**
@@ -27,7 +26,7 @@ class IndexController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.products.create');
     }
 
     /**
@@ -49,7 +48,10 @@ class IndexController extends Controller
      */
     public function show($id)
     {
-        //
+        $categories = Category::all();
+        $subCategories = SubCategory::all();
+
+        return view('user.products.detail', compact('categories', 'subCategories'));
     }
 
     /**

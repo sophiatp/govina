@@ -240,10 +240,12 @@ body {
 }
 .header_bottom_left{
 	float:left;
-	width:25%;
+	width:28%;
 }
 .categories{
 	border:1px solid #EEE;
+    width: 300px;
+    display: inline-block;
 }
 .categories h3{
 	font-size:1.2em;
@@ -262,7 +264,7 @@ body {
     margin:0 20px;
     background:url(../images/drop_arrow.png) no-repeat 0;
     border-bottom: 1px solid #EEE;
-    text-transform:uppercase;	
+    text-transform:uppercase;
 }
 .categories li:last-child a{
 	border:none;
@@ -272,13 +274,15 @@ body {
 }
 .header_bottom_right{
 	float:left;
-	width:74%;
+	width:71%;
 	padding-left:1%;
 }
 /***** Content *****/
 .content {
-	padding: 20px 0;
 	background: #FFF;
+    width: 770px;
+    display: inline-block;
+    vertical-align: top;
 }
 .content h2 {
 	color: #383838;
@@ -1921,4 +1925,18 @@ body {
 	.signup input[type="submit"] {
 		width: 80px;
 	}
+}
+
+.main-category {
+    background: #B81D22 !important;
+}
+
+.main-category-link {
+    color: #fff !important;
+    border-bottom: none !important;
+    background: none !important;
+}
+
+.main {
+    margin-top: 15px;
 }

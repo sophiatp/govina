@@ -144,10 +144,5 @@ class SubCategoriesTableSeeder extends Seeder
             'name' => 'Giấy in hóa đơn',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
-
-
-
-
-
     }
 }
