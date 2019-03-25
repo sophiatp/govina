@@ -1,0 +1,15 @@
+#sub_id {
+    float: left;
+    width: 50%;
+    height: 34px;
+}
+
+.images_1_of_4 {
+    width: 20.8%;
+    padding: 1.5%;
+    text-align: center;
+    position: relative;
+}
+.images_1_of_4  img {
+    max-width: 100%;
+}

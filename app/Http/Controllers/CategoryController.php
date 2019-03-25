@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\SubCategory;
 
 class CategoryController extends Controller
 {
@@ -14,10 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(10);
-
-        /*@TODO Please change to view admin*/
-        return view('user.main_components.menu', compact('categories'));
+        return view('admin.category.list');
     }
 
     /**
@@ -27,7 +25,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        $subCategories = SubCategory::all();
 
+        return view('admin.category.create-category', compact('subCategories'));
     }
 
     /**

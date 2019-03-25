@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\SubCategory;
+use App\Models\Product;
 
 class IndexController extends Controller
 {
@@ -17,7 +18,21 @@ class IndexController extends Controller
         $categories = Category::all();
         $subCategories = SubCategory::all();
 
-        return view('user.home.home', compact('categories', 'subCategories'));
+        $congAnNinh = Product::where('sub_id', 1)->limit(4)->get();
+        $temTu = Product::where('sub_id', 2)->limit(4)->get();
+        $goTemTu = Product::where('sub_id', 4)->limit(4)->get();
+        $keKhoHang = Product::where('sub_id', 4)->limit(4)->get();
+        $thietBiSieuthi = Product::where('sub_id', 5)->limit(4)->get();
+
+        return view('user.home.home', compact(
+            'categories',
+            'subCategories',
+            'congAnNinh',
+            'temTu',
+            'keKhoHang',
+            'goTemTu',
+            'thietBiSieuthi'
+        ));
     }
 
     /**
@@ -42,14 +57,24 @@ class IndexController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show products by subCategory
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $categories = Category::all();
+        $subCategories = SubCategory::all();
+        $subCategory = SubCategory::where('slug', $slug)->first();
+        $products = Product::where('sub_id', $subCategory['id'])->get();
+
+        return view('user.products.list-by-subcategory', compact(
+            'categories',
+            'subCategories',
+            'products',
+            'subCategory'
+        ));
     }
 
     /**
@@ -84,5 +109,16 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function search() {
+        die('heee');
+        echo "<pre>";
+        print_r('hehehe');
+        die();
+    }
+
+    public function contact() {
+        die('heheh');
     }
 }

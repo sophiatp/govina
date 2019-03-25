@@ -1,5 +1,9 @@
 @extends('user.home.master')
 
+@section('title')
+    GOVINA-Trang chủ
+@stop
+
 @section('content')
 <div class="content_top">
     <div class="heading">
@@ -7,257 +11,84 @@
     </div>
     <div class="clear"></div>
 </div>
+
 <div class="section group">
+    @foreach($congAnNinh as $item)
     <div class="grid_1_of_4 images_1_of_4">
-        <a href="{{route('products.show', 'ten-san-pham-1')}}"><img src="{{ asset('user/images/feature-pic1.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
+        <a href="{{route('products.show', $item['slug'])}}">
+            <img src="{{ asset('images/' . $item['image']) }}" alt="" height="160px"/>
+        </a>
+        <h3>{{$item['name']}}</h3>
         <div class="price-details">
             <div class="price-number">
-                <p><span class="rupees">$620.87</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/feature-pic2.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$899.75</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/feature-pic3.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$599.00</span></p>
+                <p>
+                    <span class="rupees">Giá : {{$item['price']}} VND</span>
+                </p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/feature-pic4.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$679.87</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <div class="section group">
+    @foreach($temTu as $item)
     <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic1.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
+        <a href="preview.html"><img src="{{ asset('images/' . $item['image']) }}" alt="Image" height="160px"/></a>
+        <h3>{{ $item['name'] }}</h3>
         <div class="price-details">
             <div class="price-number">
-                <p><span class="rupees">$849.99</span></p>
+                <p><span class="rupees">Giá: {{ $item['price'] }} VND</span></p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic2.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$599.99</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic4.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$799.99</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic3.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$899.99</span></p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <div class="section group">
+    @foreach($keKhoHang as $item)
     <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic1.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
+        <a href="preview.html"><img src="{{ asset('images/' . $item['image']) }}" alt="Image" height="160px"/></a>
+        <h3>{{ $item['name'] }}</h3>
         <div class="price-details">
             <div class="price-number">
-                <p><span class="rupees">$849.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
+                <p><span class="rupees">Giá: {{ $item['price'] }} VND</span></p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic2.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$599.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic4.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$799.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic3.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$899.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <div class="section group">
+    @foreach($goTemTu as $item)
     <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic1.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
+        <a href="preview.html"><img src="{{ asset('images/' . $item['image']) }}" alt="Image" height="160px"/></a>
+        <h3>{{ $item['name'] }}</h3>
         <div class="price-details">
             <div class="price-number">
-                <p><span class="rupees">$849.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
+                <p><span class="rupees">Giá: {{ $item['price'] }} VND</span></p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic2.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$599.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic4.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$799.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic3.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$899.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <div class="section group">
+    @foreach($thietBiSieuthi as $item)
     <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic1.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
+        <a href="preview.html"><img src="{{ asset('images/' . $item['image']) }}" alt="Image" height="160px"/></a>
+        <h3>{{ $item['name'] }}</h3>
         <div class="price-details">
             <div class="price-number">
-                <p><span class="rupees">$849.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
+                <p><span class="rupees">Giá: {{ $item['price'] }} VND</span></p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic2.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$599.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic4.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$799.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="grid_1_of_4 images_1_of_4">
-        <a href="preview.html"><img src="{{ asset('user/images/new-pic3.jpg') }}" alt=""/></a>
-        <h2>Lorem Ipsum is simply </h2>
-        <div class="price-details">
-            <div class="price-number">
-                <p><span class="rupees">$899.99</span></p>
-            </div>
-            <div class="add-cart">
-                <h4><a href="preview.html">Add to Cart</a></h4>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 @endsection

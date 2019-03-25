@@ -6,11 +6,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <head>
-    <title>Free Home Shoppe Website Template | Home :: w3layouts</title>
+    <title>@yield('title')</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="{{ asset('user/css/style.css') }}" rel="stylesheet" type="text/css" media="all"/>
     <link href="{{ asset('user/css/slider.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script type="text/javascript" src="{{ asset('user/js/jquery-1.7.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('user/js/move-top.js') }}"></script>
     <script type="text/javascript" src="{{ asset('user/js/easing.js') }}"></script>

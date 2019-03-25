@@ -47,9 +47,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Thêm danh mục chính</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Thêm danh mục con</a></li>
+                    <li><a href="{{route('categories.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
+                    <li><a href="{{route('categories.create')}}"><i class="fa fa-circle-o"></i> Thêm danh mục chính</a></li>
+                    <li><a href="{{route('subcategories.create')}}"><i class="fa fa-circle-o"></i> Thêm danh mục con</a></li>
                 </ul>
             </li>
             <li>

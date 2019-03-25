@@ -10,6 +10,10 @@ class SubCategory extends Model
     use Notifiable;
 
     protected $fillable = [
-        'category_id', 'name'
+        'category_id', 'name', 'slug'
     ];
+
+    public function categories() {
+        return $this->hasMany(Product::class);
+    }
 }
