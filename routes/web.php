@@ -29,17 +29,7 @@ Route::resource('categories', 'CategoryController');
 Route::resource('products', 'ProductController');
 Route::resource('subcategories', 'SubCategoryController');
 
-Route::get('/{subCategoryId}', [
-    'as' => 'index.productBySubCategory',
+Route::get('/{slug}', [
+    'as' => 'index.listProductsBySlug',
     'uses' => 'IndexController@show'
-]);
-
-Route::get('/search', [
-   'as' => 'index.search',
-   'uses' => 'IndexController@search'
-]);
-
-Route::get('/contact', [
-    'as' => 'index.contact',
-    'uses' => 'IndexController@contact'
 ]);

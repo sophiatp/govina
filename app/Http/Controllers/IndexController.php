@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\SubCategory;
 use App\Models\Product;
+use DB;
 
 class IndexController extends Controller
 {
@@ -66,8 +67,23 @@ class IndexController extends Controller
     {
         $categories = Category::all();
         $subCategories = SubCategory::all();
+
         $subCategory = SubCategory::where('slug', $slug)->first();
-        $products = Product::where('sub_id', $subCategory['id'])->get();
+        $categoryId = Category::where('slug', $slug)->first();
+
+        if ($subCategory) {
+            $products = Product::where('sub_id', $subCategory['id'])->paginate(16);
+        }
+
+        if ($categoryId) {
+            $products = DB::table('categories')
+                ->join('sub_categories', 'categories.id', '=', 'sub_categories.category_id')
+                ->join('products', 'sub_categories.id', '=', 'products.sub_id')
+                ->where('category_id', $categoryId['id'])
+                ->paginate(16);
+        }
+
+
 
         return view('user.products.list-by-subcategory', compact(
             'categories',
@@ -109,16 +125,5 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function search() {
-        die('heee');
-        echo "<pre>";
-        print_r('hehehe');
-        die();
-    }
-
-    public function contact() {
-        die('heheh');
     }
 }

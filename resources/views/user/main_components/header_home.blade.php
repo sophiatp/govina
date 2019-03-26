@@ -16,10 +16,11 @@
         <div class="menu">
             <ul>
                 <li class="active"><a href="/">Trang Chủ</a></li>
+                <li><a href="/">Sản Phẩm</a></li>
                 <li><a href="/">Giới Thiệu</a></li>
-                <li><a href="delivery.html">Tin Tức</a></li>
-                <li><a href="news.html">Thanh Toán</a></li>
-                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="/">Tin Tức</a></li>
+                <li><a href="/">Thanh Toán</a></li>
+                <li><a href="/">Liên Hệ</a></li>
                 <div class="clear"></div>
             </ul>
         </div>

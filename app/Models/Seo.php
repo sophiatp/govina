@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class SubCategory extends Model
+class Seo extends Model
 {
     use Notifiable;
 
     protected $fillable = [
-        'category_id', 'name', 'slug'
+        'title',
+        'keyword',
+        'description'
     ];
-
-    public function category() {
-        return $this->belongsTo(Product::class);
-    }
 }

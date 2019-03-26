@@ -15,20 +15,24 @@
     <div class="section group">
         @foreach($products as $item)
             <div class="grid_1_of_4 images_1_of_4">
-                <a href="{{route('products.show', $item['slug'])}}">
-                    <img src="{{ asset('images/' . $item['image']) }}" alt="" height="160px"/>
+                <a href="{{route('products.show', $item->slug)}}">
+                    <img src="{{ asset('images/' . $item->image) }}" alt="" height="160px"/>
                 </a>
-                <h3>{{$item['name']}}</h3>
+                <h3>{{$item->name}}</h3>
                 <div class="price-details">
                     <div class="price-number">
                         <p>
-                            <span class="rupees">Giá : {{$item['price']}} VND</span>
+                            <span class="rupees">Giá : {{$item->price}} VND</span>
                         </p>
                     </div>
                     <div class="clear"></div>
                 </div>
             </div>
         @endforeach
+    </div>
+    <!-- pagination -->
+    <div class="pagination pull-right">
+        {!! $products->appends(Request::except('page'))->links() !!}
     </div>
     @else
         <div class="section group" style="margin-top: 30px; text-align: center">
